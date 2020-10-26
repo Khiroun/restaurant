@@ -56,11 +56,23 @@ const index = () => {
                 </div>
                 <div className="col-md-8">
                   <p>
-                      Cras ut viverra eros. Phasellus sollicitudin sapien id luctus tempor. Sed hend rerit inter dum sagittis. Donec nunc lacus, dapibus nec interdum eget, ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. In massa est, dignissim in libero ac, fringilla ornare mi. Etiam interdum ligula purus.
+                      le restaurant <span style={{fontFamily: 'Great Vibes', fontSize: '3.5rem'}}>Djenane Sultane since 2013</span>  , Snack , resto , café est situé à Hydra il est parmi les meilleurs restaurants qui rassemble entre le traditionnel et l’algérien .
+
+ Vous passerez un agréable moment dans une salle à la décoration orientale et vous avez le choix entre une salle resto ou kaada.
+
+Une cuisine traditionnelle et succulente qui vous mène à travers le temps et qui vous fait rappeler les meilleurs moments oculaires de votre vie, , des entrées froides et chaudes , plats gastronomiques ou traditionnels ,gâteaux et desserts , sont composés nos menus.
+
+L'établissement assure aussi le service snack et café pour les pauses ou after work.
+
+       
+
                   </p>
                   <br />
                   <p>
-                      Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. In massa est, dignissim in libero ac, fringilla ornare.
+                      Son staff chaleureux et aux petits soins vous assure un service professionnel, vous accueille dans une ambiance orientale, en vous offrant des moments inoubliables.
+
+<br/>
+<span style={{fontFamily: 'Great Vibes', fontSize: '3.5rem'}}>Djenane Sultane</span> vous invite à passer d'agréables moments sur les banquettes dans la salle aux couleurs ravissantes  en écoutant Tarab  et Découvrir la gastronomie algérienne et la variété de ses plat
                   </p>
                 </div>
               </div>
