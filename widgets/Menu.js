@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 
+const Heading4 = ({children })=>{
+return <h4 style={{textAlign: 'center', width: '100%'}}>{children}</h4>
+}
+
 const MenuItem = ({ title }) => {
   return <div className="menu-item col-sm-6 col-xs-12 starter dinner desserts">
     <div className="clearfix menu-wrapper">
-      <h4>{title}</h4>
+      <Heading4>{title}</Heading4>
 
     </div>
   </div>
@@ -30,6 +34,19 @@ const EntreesFroides = () => {
       })
     }
 
+  </div>
+}
+
+const Entrees = () => {
+  return <div className='row'>
+    <div className='col-md-6 col-sm-12'>
+      <h2>Entrées Chaudes</h2>
+      <EntreesChaudes />
+    </div>
+    <div className='col-md-6 col-sm-12'>
+      <h2>Entrées Froides</h2>
+      <EntreesFroides />
+    </div>
   </div>
 }
 
@@ -60,6 +77,19 @@ const Accompagnements = () => {
   </div>
 }
 
+const PlatsEtAccompagnements = () => {
+  return <div className='row'>
+    <div className='col-md-6 col-sm-12' >
+      <h2>Plats</h2>
+      <Plats />
+    </div>
+    <div className='col-md-6 col-sm-12' >
+      <h2>Accompagnements</h2>
+      <Accompagnements />
+    </div>
+  </div>
+}
+
 const BoissonsFraiches = () => {
   const items = [{ title: 'RedBull' }, { title: 'Cocktail de Fruits' }, { title: 'Milkshake Baname/Fraise' }, { title: 'Mojito' }, { title: "Jus d'orange/Citron" }, { title: 'Boissons 1 L' }, { title: 'Vichy 1 L' }, { title: 'Rauch' }, { title: 'Soft Drink (Canettes)' }, { title: 'Smoothie' }]
   return <div className="row menu-items">
@@ -81,6 +111,19 @@ const BoissonsChaudes = () => {
       })
     }
 
+  </div>
+}
+
+const Boissons = () => {
+  return <div className='row'>
+    <div className='col-md-6 col-sm-12' >
+      <h2>Boissons Fraiches</h2>
+      <BoissonsFraiches />
+    </div>
+    <div className='col-md-6 col-sm-12' >
+      <h2>Boissons Chaudes</h2>
+      <BoissonsChaudes />
+    </div>
   </div>
 }
 
@@ -125,7 +168,7 @@ const Poisson = () => {
 }
 
 const Menu = () => {
-  const [menu, setMenu] = useState('EC')
+  const [menu, setMenu] = useState('EN')
   return (
     <section className="menu">
       <div className="container">
@@ -139,13 +182,16 @@ const Menu = () => {
         <div className="food-menu wow fadeInUp">
           <div className="row">
             <div className="col-md-12">
-              <div className="menu-tags">
-                <span data-filter="*" className={menu === 'EC' ? 'tagsort-active' : ''} onClick={() => { setMenu('EC') }}>Entrées Chaudes</span>
-                <span data-filter=".starter" className={menu === 'EF' ? 'tagsort-active' : ''} onClick={() => { setMenu('EF') }}>Entrées Froides</span>
-                <span data-filter=".breakfast" className={menu === 'PL' ? 'tagsort-active' : ''} onClick={() => { setMenu('PL') }}>Plats</span>
-                <span data-filter=".desserts" className={menu === 'AC' ? 'tagsort-active' : ''} onClick={() => { setMenu('AC') }}>Accompagnements</span>
-                <span data-filter=".lunch" className={menu === 'BF' ? 'tagsort-active' : ''} onClick={() => { setMenu('BF') }}>Boissons Fraiches</span>
-                <span data-filter=".dinner" className={menu === 'BC' ? 'tagsort-active' : ''} onClick={() => { setMenu('BC') }}>Boissons Chaudes</span>
+              <div className="menu-tags" style={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap'
+              }}>
+                <span data-filter=".desserts" className={menu === 'EN' ? 'tagsort-active' : ''} onClick={() => { setMenu('EN') }}>Entrées</span>
+                <span data-filter=".breakfast" className={menu === 'PA' ? 'tagsort-active' : ''} onClick={() => { setMenu('PA') }}>Plats et Accompagnements</span>
+                <span data-filter=".breakfast" className={menu === 'BO' ? 'tagsort-active' : ''} onClick={() => { setMenu('BO') }}>Boissons</span>
+
                 <span data-filter=".desserts" className={menu === 'DE' ? 'tagsort-active' : ''} onClick={() => { setMenu('DE') }}>Desserts</span>
                 <span data-filter=".desserts" className={menu === 'TA' ? 'tagsort-active' : ''} onClick={() => { setMenu('TA') }}>Tadjine</span>
                 <span data-filter=".desserts" className={menu === 'PO' ? 'tagsort-active' : ''} onClick={() => { setMenu('PO') }}>Poisson</span>
@@ -153,25 +199,19 @@ const Menu = () => {
             </div>
           </div>
           {
-            menu === 'EC' && <EntreesChaudes />
-          }
-          {
-            menu === 'EF' && <EntreesFroides />
-          }{
-            menu === 'PL' && <Plats />
-          }{
-            menu === 'BF' && <BoissonsFraiches />
-          }{
-            menu === 'BC' && <BoissonsChaudes />
-          }{
             menu === 'DE' && <Desserts />
           }
           {
-            menu === 'AC' && <Accompagnements />
-          }{
             menu === 'TA' && <Tadjine />
           }{
             menu === 'PO' && <Poisson />
+          }{
+            menu === 'EN' && <Entrees />
+          }{
+            menu === 'PA' && <PlatsEtAccompagnements />
+          }
+          {
+            menu === 'BO' && <Boissons />
           }
         </div>
       </div>

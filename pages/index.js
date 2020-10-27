@@ -29,7 +29,7 @@ const index = () => {
                 <img src="img/arrow-down.png" alt="down-arrow" />
 
               </Link>
-              
+
             </div>
           </section>
           <section className="about" id="about">
@@ -56,7 +56,7 @@ const index = () => {
                 </div>
                 <div className="col-md-8">
                   <p>
-                      le restaurant <span style={{fontFamily: 'Great Vibes', fontSize: '3.5rem'}}>Djenane Sultane since 2013</span>  , Snack , resto , café est situé à Hydra il est parmi les meilleurs restaurants qui rassemble entre le traditionnel et l’algérien .
+                      le restaurant <span style={{ fontFamily: 'Great Vibes', fontSize: '3.5rem' }}>Djenane Sultane since 2013</span>  , Snack , resto , café est situé à Hydra il est parmi les meilleurs restaurants qui rassemble entre le traditionnel et l’algérien .
 
  Vous passerez un agréable moment dans une salle à la décoration orientale et vous avez le choix entre une salle resto ou kaada.
 
@@ -64,15 +64,13 @@ Une cuisine traditionnelle et succulente qui vous mène à travers le temps et q
 
 L'établissement assure aussi le service snack et café pour les pauses ou after work.
 
-       
-
                   </p>
                   <br />
                   <p>
                       Son staff chaleureux et aux petits soins vous assure un service professionnel, vous accueille dans une ambiance orientale, en vous offrant des moments inoubliables.
 
-<br/>
-<span style={{fontFamily: 'Great Vibes', fontSize: '3.5rem'}}>Djenane Sultane</span> vous invite à passer d'agréables moments sur les banquettes dans la salle aux couleurs ravissantes  en écoutant Tarab  et Découvrir la gastronomie algérienne et la variété de ses plat
+                    <br/>
+                    <span style={{ fontFamily: 'Great Vibes', fontSize: '3.5rem' }}>Djenane Sultane</span> vous invite à passer d'agréables moments sur les banquettes dans la salle aux couleurs ravissantes  en écoutant Tarab  et Découvrir la gastronomie algérienne et la variété de ses plat
                   </p>
                 </div>
               </div>
