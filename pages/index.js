@@ -8,6 +8,9 @@ import Gallerie from '../widgets/Gallerie'
 import Menu from '../widgets/Menu'
 
 const index = () => {
+  const images = ['img/gallerie/1.jpg', 'img/gallerie/2.jpg', 'img/gallerie/3.jpg', 'img/gallerie/4.jpg', 'img/gallerie/5.jpg',
+  'img/gallerie/6.jpg', 'img/gallerie/7.jpg', 'img/gallerie/8.jpg', 'img/gallerie/9.jpg', 'img/gallerie/10.jpg', 'img/gallerie/11.jpg',
+  'img/gallerie/12.jpg', ]
   return (
     <div>
 
@@ -85,7 +88,7 @@ L'établissement assure aussi le service snack et café pour les pauses ou after
                   <div className="page-header wow fadeInDown">
                     <h1>Gallerie<small>Nous aimons publier des photos de nos clients en train de passer un bon moment</small></h1>
                   </div>
-                  <Gallerie />
+                  <Gallerie images={images} />
                 </div>
               </div>
             </div>
@@ -95,7 +98,7 @@ L'établissement assure aussi le service snack et café pour les pauses ou after
           <Footer />
         </div>
       </div>
-      
+
     </div>
 
   )
