@@ -2,6 +2,7 @@ import React from 'react'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import RoomIcon from '@material-ui/icons/Room'
 import PhoneIcon from '@material-ui/icons/Phone'
+import SectionWithBg from '../components/SectionWithBg'
 
 const Apropos = () => {
   return <div className="col-md-4 col-sm-12">
@@ -13,10 +14,7 @@ const Apropos = () => {
 
 const Footer = () => {
   return (
-    <section className="footer" style={{
-      background: "url('img/bg3.png') no-repeat center",
-      backgroundSize: 'cover'
-    }}>
+    <SectionWithBg className="footer" bg='img/bg3.png'>
       <div className="container">
         <div className="row">
           <Apropos />
@@ -38,7 +36,7 @@ const Footer = () => {
         </div>
       </div>
 
-    </section>
+    </SectionWithBg>
 
   )
 }

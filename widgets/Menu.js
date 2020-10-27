@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const Heading4 = ({children })=>{
-return <h4 style={{textAlign: 'center', width: '100%'}}>{children}</h4>
+const Heading4 = ({ children }) => {
+  return <h4 style={{ textAlign: 'center', width: '100%' }}>{children}</h4>
 }
 
 const MenuItem = ({ title }) => {
