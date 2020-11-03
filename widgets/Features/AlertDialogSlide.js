@@ -23,8 +23,8 @@ export default function AlertDialogSlide () {
   }
 
   return (
-    <div style={{width: '100%'}}>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen} style={{width: '100%'}}>
+    <div style={{ width: '100%' }}>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen} style={{ width: '100%' }}>
         Gallerie
       </Button>
       <Dialog

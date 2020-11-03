@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const TextFont = ({ children }) => {
   return (
@@ -7,5 +8,7 @@ const TextFont = ({ children }) => {
     </span>
   )
 }
-
+TextFont.propTypes = {
+  children: PropTypes.node
+}
 export default TextFont

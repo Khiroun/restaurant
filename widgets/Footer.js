@@ -7,7 +7,7 @@ import SectionWithBg from '../components/SectionWithBg'
 const Apropos = () => {
   return <div className="col-md-4 col-sm-12">
     <h1>A propos</h1>
-    <p>Duis leo justo, condimentum at purus eu,Aenean sed dolor sem. Etiam massa libero, auctor vitae egestas et, accumsan quis nunc.Duis leo justo, condimentum at purus eu, posuere pretium tellus.</p>
+    <p>le restaurant Djenane Sultane since 2013 , Snack , resto , café est situé à Hydra il est parmi les meilleurs restaurants qui rassemble entre le traditionnel et l’algérien . Vous passerez un agréable moment dans une salle à la décoration orientale et vous avez le choix entre une salle resto ou kaada</p>
 
   </div>
 }

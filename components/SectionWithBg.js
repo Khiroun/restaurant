@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 const SectionWithBg = ({ children, bg, className }) => {
   return (
     <section className={className} style={{
@@ -9,6 +9,12 @@ const SectionWithBg = ({ children, bg, className }) => {
       {children}
     </section>
   )
+}
+
+SectionWithBg.propTypes = {
+  children: PropTypes.node,
+  bg: PropTypes.string,
+  className: PropTypes.string
 }
 
 export default SectionWithBg

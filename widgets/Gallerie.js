@@ -1,6 +1,6 @@
 import { Card, CardMedia, Container, Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
-
+import PropTypes from 'prop-types'
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2)
@@ -33,8 +33,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-
-const Gallerie = ({images}) => {
+const Gallerie = ({ images }) => {
   const classes = useStyles()
 
   return (
@@ -56,6 +55,10 @@ const Gallerie = ({images}) => {
       </Grid>
     </Container>
   )
+}
+
+Gallerie.propTypes = {
+  images: PropTypes.array
 }
 
 export default Gallerie

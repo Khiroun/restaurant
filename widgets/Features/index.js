@@ -1,7 +1,6 @@
 import React from 'react'
 import TextFont from '../../components/TextFont'
 import SectionWithBg from '../../components/SectionWithBg'
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, makeStyles, Typography } from '@material-ui/core'
 import FeaturesCards from './FeaturesCards'
 
 const Traiteur = () => {

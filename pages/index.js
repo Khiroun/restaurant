@@ -9,8 +9,8 @@ import Menu from '../widgets/Menu'
 
 const index = () => {
   const images = ['img/gallerie/1.jpg', 'img/gallerie/2.jpg', 'img/gallerie/3.jpg', 'img/gallerie/4.jpg', 'img/gallerie/5.jpg',
-  'img/gallerie/6.jpg', 'img/gallerie/7.jpg', 'img/gallerie/8.jpg', 'img/gallerie/9.jpg', 'img/gallerie/10.jpg', 'img/gallerie/11.jpg',
-  'img/gallerie/12.jpg', ]
+    'img/gallerie/6.jpg', 'img/gallerie/7.jpg', 'img/gallerie/8.jpg', 'img/gallerie/9.jpg', 'img/gallerie/10.jpg', 'img/gallerie/11.jpg',
+    'img/gallerie/12.jpg']
   return (
     <div>
 
@@ -65,7 +65,7 @@ const index = () => {
 
 Une cuisine traditionnelle et succulente qui vous mène à travers le temps et qui vous fait rappeler les meilleurs moments oculaires de votre vie, , des entrées froides et chaudes , plats gastronomiques ou traditionnels ,gâteaux et desserts , sont composés nos menus.
 
-L'établissement assure aussi le service snack et café pour les pauses ou after work.
+L&apos;établissement assure aussi le service snack et café pour les pauses ou after work.
 
                   </p>
                   <br />
@@ -73,7 +73,7 @@ L'établissement assure aussi le service snack et café pour les pauses ou after
                       Son staff chaleureux et aux petits soins vous assure un service professionnel, vous accueille dans une ambiance orientale, en vous offrant des moments inoubliables.
 
                     <br/>
-                    <TextFont>Djenane Sultane</TextFont> vous invite à passer d'agréables moments sur les banquettes dans la salle aux couleurs ravissantes  en écoutant Tarab  et Découvrir la gastronomie algérienne et la variété de ses plat
+                    <TextFont>Djenane Sultane</TextFont> vous invite à passer d&apos;agréables moments sur les banquettes dans la salle aux couleurs ravissantes  en écoutant Tarab  et Découvrir la gastronomie algérienne et la variété de ses plat
                   </p>
                 </div>
               </div>

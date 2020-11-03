@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
+import Proptypes from 'prop-types'
+import MUIMenu from '@material-ui/core/Menu'
+import DropDownMenuItem from './DropDownMenuItem'
 
 const Heading4 = ({ children }) => {
   return <h4 style={{ textAlign: 'center', width: '100%' }}>{children}</h4>
+}
+
+Heading4.propTypes = {
+  children: Proptypes.node
 }
 
 const MenuItem = ({ title }) => {
@@ -11,6 +18,10 @@ const MenuItem = ({ title }) => {
 
     </div>
   </div>
+}
+
+MenuItem.propTypes = {
+  title: Proptypes.string
 }
 
 const EntreesChaudes = () => {
@@ -141,7 +152,7 @@ const Desserts = () => {
 
 const Tadjine = () => {
   const items = [{ title: 'Tadjine Zitoun' }, { title: 'Tadjine El Djben' }, { title: "M'touem" }, { title: 'Chetitha Viande' },
-    { title: 'Chetitha Poulet' }, { title: 'Chetitha Zellif' }, { title: 'Bekbouka' },
+    { title: 'Chetitha Poulet' }, { title: 'Bekbouka' },
     { title: 'Kbeb' }, { title: 'Chetitha Zellif' }]
   return <div className="row menu-items">
     {
@@ -168,7 +179,103 @@ const Poisson = () => {
 }
 
 const Menu = () => {
-  const [menu, setMenu] = useState('EN')
+  const [menu, setMenu] = useState('PO')
+  const EntreesDropDown = ({ selected }) => {
+    const [anchorEl, setAnchorEl] = React.useState(null)
+
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget)
+    }
+
+    const handleClose = () => {
+      setAnchorEl(null)
+    }
+    console.log({ selected })
+    return (
+      <>
+        <span aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className={selected ? 'tagsort-active' : ''}>
+        Entrées
+        </span>
+        <MUIMenu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <div className='menu-tags' style={{ display: 'flex', flexDirection: 'column' }}>
+            <span onClick={() => { setMenu('EC') }}>Entrées Chaudes</span>
+            <span onClick={() => { setMenu('EF') }}>Entrées Froides</span>
+          </div>
+        </MUIMenu>
+      </>
+    )
+  }
+
+  const PADropDown = ({ selected }) => {
+    const [anchorEl, setAnchorEl] = React.useState(null)
+
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget)
+    }
+
+    const handleClose = () => {
+      setAnchorEl(null)
+    }
+    console.log({ selected })
+    return (
+      <>
+        <span aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className={selected ? 'tagsort-active' : ''}>
+        Plats Et Accompagnements
+        </span>
+        <MUIMenu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <div className='menu-tags' style={{ display: 'flex', flexDirection: 'column' }}>
+            <span onClick={() => { setMenu('PL') }}>Plats</span>
+            <span onClick={() => { setMenu('AC') }}>Accompagnements</span>
+          </div>
+        </MUIMenu>
+      </>
+    )
+  }
+
+  const BoissonsDropDown = ({ selected }) => {
+    const [anchorEl, setAnchorEl] = React.useState(null)
+
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget)
+    }
+
+    const handleClose = () => {
+      setAnchorEl(null)
+    }
+    console.log({ selected })
+    return (
+      <>
+        <span aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className={selected ? 'tagsort-active' : ''}>
+        Boissons
+        </span>
+        <MUIMenu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <div className='menu-tags' style={{ display: 'flex', flexDirection: 'column' }}>
+            <span onClick={() => { setMenu('BC') }}>Boissons Chaudes</span>
+            <span onClick={() => { setMenu('BF') }}>Boissons Fraiches</span>
+          </div>
+        </MUIMenu>
+      </>
+    )
+  }
+
   return (
     <section className="menu">
       <div className="container">
@@ -188,10 +295,18 @@ const Menu = () => {
                 justifyContent: 'space-between',
                 flexWrap: 'wrap'
               }}>
-                <span data-filter=".desserts" className={menu === 'EN' ? 'tagsort-active' : ''} onClick={() => { setMenu('EN') }}>Entrées</span>
-                <span data-filter=".breakfast" className={menu === 'PA' ? 'tagsort-active' : ''} onClick={() => { setMenu('PA') }}>Plats et Accompagnements</span>
-                <span data-filter=".breakfast" className={menu === 'BO' ? 'tagsort-active' : ''} onClick={() => { setMenu('BO') }}>Boissons</span>
-
+                {<EntreesDropDown selected={menu === 'EC' || menu === 'EF'} />}
+                {<PADropDown selected={menu === 'PL' || menu === 'AC'} />}
+                {<BoissonsDropDown selected={menu === 'BC' || menu === 'BF'} />}
+                {
+                  // <span data-filter=".desserts" className={menu === 'EN' ? 'tagsort-active' : ''} onClick={() => { setMenu('EN') }}>Entrées</span>
+                }
+                {/* <DropDownMenuItem title='Entrées' selected={menu === 'EC' || menu === 'EF'} renderItems={()=>{
+                    return <><span onClick={() => { setMenu('EC') }}>Entrées Chaudes</span>
+            <span onClick={() => { setMenu('EF') }}>Entrées Froides</span></>
+                }} /> */}
+                {/*<span data-filter=".breakfast" className={menu === 'PA' ? 'tagsort-active' : ''} onClick={() => { setMenu('PA') }}>Plats et Accompagnements</span>*/}
+                {/*<span data-filter=".breakfast" className={menu === 'BO' ? 'tagsort-active' : ''} onClick={() => { setMenu('BO') }}>Boissons</span>*/}
                 <span data-filter=".desserts" className={menu === 'DE' ? 'tagsort-active' : ''} onClick={() => { setMenu('DE') }}>Desserts</span>
                 <span data-filter=".desserts" className={menu === 'TA' ? 'tagsort-active' : ''} onClick={() => { setMenu('TA') }}>Tadjine</span>
                 <span data-filter=".desserts" className={menu === 'PO' ? 'tagsort-active' : ''} onClick={() => { setMenu('PO') }}>Poisson</span>
@@ -212,6 +327,22 @@ const Menu = () => {
           }
           {
             menu === 'BO' && <Boissons />
+          }
+          {
+            menu === 'EC' && <EntreesChaudes />
+          }{
+            menu === 'EF' && <EntreesFroides />
+          }
+          {
+            menu === 'PL' && <Plats />
+          }{
+            menu === 'AC' && <Accompagnements />
+          }
+          {
+            menu === 'BC' && <BoissonsChaudes />
+          }
+          {
+            menu === 'BF' && <BoissonsFraiches />
           }
         </div>
       </div>
