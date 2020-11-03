@@ -20,7 +20,7 @@ const index = () => {
           <SectionWithBg bg='img/bg4.png' className='home'>
             <div className="tittle-block">
               <div className="logo">
-                <a href="./index.html">
+                <a href="/">
                   <img src="img/logo1.png" alt="logo" width='25%' />
                 </a>
               </div>

@@ -29,9 +29,7 @@ const Footer = () => {
               </a>
 
             </div>
-            <div className="footer-address" style={{
-              backgroundColor: 'rgba(255,255,255,0.1)'
-            }}>
+            <div className="footer-address">
               <p style={{ color: 'white' }}><RoomIcon /> 40 lot djnane Boursas les madeleines Hydra (côté Toyota) 16000 Algiers, Algeria</p>
               <p style={{ color: 'white' }}><PhoneIcon /> Phone: 0554 25 65 31</p>
             </div>
