@@ -4,7 +4,7 @@ import SectionWithBg from '../../components/SectionWithBg'
 import FeaturesCards from './FeaturesCards'
 
 const Traiteur = () => {
-  return <SectionWithBg bg='img/bg2.png'>
+  return <SectionWithBg bg='img/traiteur.jpg'>
     <div className='container'>
       <div className='row'>
         <div className='col-md-12'>

@@ -39,15 +39,17 @@ const FeaturesCards = () => {
   const cards = [
     {
       title: 'une célébration privée',
-      subTitle: 'Mariage, Communion, Anniversaire…'
+      subTitle: 'Mariage, Communion, Anniversaire…',
+      images: ['img/bd1.jpg', 'img/bd2.jpg', 'img/bd3.jpg', 'img/bd4.jpg', 'img/bd5.jpg', 'img/bd6.jpg', 'img/bd7.jpg', 'img/bd8.jpg'],
+      mainImage: 'img/mainPriv.jpg'
     },
-    {
-      title: 'un événement privé',
-      subTitle: 'réception, cocktail, dîner, atelier culinaire…'
-    },
+
     {
       title: 'un événement professionnel',
-      subTitle: 'séminaire, convention, cocktail,  afterwork, atelier culinaire…'
+      subTitle: 'séminaire, convention, cocktail,  afterwork, atelier culinaire…',
+      images: ['img/pro1.jpg', 'img/pro2.jpg', 'img/pro3.jpg', 'img/pro4.jpg',
+        'img/pro5.jpg', 'img/pro6.jpg', 'img/pro7.jpg', 'img/pro8.jpg', 'img/pro9.jpg', 'img/pro10.jpg'],
+      mainImage: 'img/mainPro.jpg'
     }
   ]
 
@@ -56,11 +58,11 @@ const FeaturesCards = () => {
       {/* End hero unit */}
       <Grid container spacing={4}>
         {cards.map((card) => (
-          <Grid item key={card.title} xs={12} sm={6} md={4}>
+          <Grid item key={card.title} xs={12} sm={6} md={6}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
-                image="img/bg2.png"
+                image={card.mainImage}
                 title={card.title}
               />
               <CardContent className={classes.cardContent}>
@@ -72,7 +74,7 @@ const FeaturesCards = () => {
                 </p>
               </CardContent>
               <CardActions>
-                <AlertDialogSlide />
+                <AlertDialogSlide images={card.images} />
               </CardActions>
             </Card>
           </Grid>

@@ -11,7 +11,7 @@ const Transition = React.forwardRef(function Transition (props, ref) {
   return <Slide direction="up" ref={ref} {...props} />
 })
 
-export default function AlertDialogSlide () {
+export default function AlertDialogSlide ({ images }) {
   const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {
@@ -39,7 +39,7 @@ export default function AlertDialogSlide () {
       >
         <DialogTitle id="alert-dialog-slide-title"></DialogTitle>
         <DialogContent>
-          <Gallerie images={['img/gallerie/1.jpg', 'img/gallerie/2.jpg', 'img/gallerie/3.jpg', 'img/gallerie/4.jpg', 'img/gallerie/5.jpg']} />
+          <Gallerie images={images} />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">

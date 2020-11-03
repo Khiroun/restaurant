@@ -14,7 +14,7 @@ const Apropos = () => {
 
 const Footer = () => {
   return (
-    <SectionWithBg className="footer" bg='img/bg3.png'>
+    <SectionWithBg className="footer" bg='img/bg3.jpg'>
       <div className="container">
         <div className="row">
           <Apropos />
@@ -27,10 +27,13 @@ const Footer = () => {
               <a href="https://www.facebook.com/Djenanesultan/">
                 <FacebookIcon />
               </a>
+
             </div>
-            <div className="footer-address">
-              <p><RoomIcon /> 40 lot djnane Boursas les madeleines Hydra (côté Toyota) 16000 Algiers, Algeria</p>
-              <p><PhoneIcon /> Phone: 0554 25 65 31</p>
+            <div className="footer-address" style={{
+              backgroundColor: 'rgba(255,255,255,0.1)'
+            }}>
+              <p style={{ color: 'white' }}><RoomIcon /> 40 lot djnane Boursas les madeleines Hydra (côté Toyota) 16000 Algiers, Algeria</p>
+              <p style={{ color: 'white' }}><PhoneIcon /> Phone: 0554 25 65 31</p>
             </div>
           </div>
         </div>

@@ -305,8 +305,8 @@ const Menu = () => {
                     return <><span onClick={() => { setMenu('EC') }}>Entrées Chaudes</span>
             <span onClick={() => { setMenu('EF') }}>Entrées Froides</span></>
                 }} /> */}
-                {/*<span data-filter=".breakfast" className={menu === 'PA' ? 'tagsort-active' : ''} onClick={() => { setMenu('PA') }}>Plats et Accompagnements</span>*/}
-                {/*<span data-filter=".breakfast" className={menu === 'BO' ? 'tagsort-active' : ''} onClick={() => { setMenu('BO') }}>Boissons</span>*/}
+                {/* <span data-filter=".breakfast" className={menu === 'PA' ? 'tagsort-active' : ''} onClick={() => { setMenu('PA') }}>Plats et Accompagnements</span> */}
+                {/* <span data-filter=".breakfast" className={menu === 'BO' ? 'tagsort-active' : ''} onClick={() => { setMenu('BO') }}>Boissons</span> */}
                 <span data-filter=".desserts" className={menu === 'DE' ? 'tagsort-active' : ''} onClick={() => { setMenu('DE') }}>Desserts</span>
                 <span data-filter=".desserts" className={menu === 'TA' ? 'tagsort-active' : ''} onClick={() => { setMenu('TA') }}>Tadjine</span>
                 <span data-filter=".desserts" className={menu === 'PO' ? 'tagsort-active' : ''} onClick={() => { setMenu('PO') }}>Poisson</span>
