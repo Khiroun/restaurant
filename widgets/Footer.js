@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
             <div className="footer-address">
               <p style={{ color: 'white' }}><RoomIcon /> 40 lot djnane Boursas les madeleines Hydra (côté Toyota) 16000 Algiers, Algeria</p>
-              <p style={{ color: 'white' }}><PhoneIcon /> Phone: 0554 25 65 31</p>
+              <p style={{ color: 'white' }}><PhoneIcon /> Phone: 0554 25 65 31 / 0552 12 04 48</p>
             </div>
           </div>
         </div>
